@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ban Appeal Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h2 { color: #d9534f; }
+        label { display: block; margin-top: 18px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 8px; margin-top: 6px; border: 1px solid #ccc; border-radius: 4px; }
+        button { margin-top: 24px; background: #5cb85c; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; font-size: 16px; cursor: pointer; }
+        button:hover { background: #4cae4c; }
+        .footer { margin-top: 32px; color: #888; font-size: 13px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ban Appeal Form</h2>
+        <form method="POST" action="http://localhost:5000/appeal">
+            <label for="discord_user_id">Your Discord User ID</label>
+            <input type="text" id="discord_user_id" name="discord_user_id" required>
+
+            <label for="discord_username">Your Discord Username</label>
+            <input type="text" id="discord_username" name="discord_username" required>
+
+            <label for="ban_reason">Reason you were banned (as you understand it)</label>
+            <textarea id="ban_reason" name="ban_reason" rows="2" required></textarea>
+
+            <!-- Appeal questions will be inserted here by the bot -->
+            <label for="q0">Why were you banned, according to you?</label>
+<textarea id="q0" name="q0" rows="2" required></textarea>
+<label for="q1">Do you accept that you broke the rules? If yes, which rule and why did it happen?</label>
+<textarea id="q1" name="q1" rows="2" required></textarea>
+<label for="q2">Why should we consider unbanning you?</label>
+<textarea id="q2" name="q2" rows="2" required></textarea>
+<label for="q3">What will you do differently to make sure this doesn’t happen again?</label>
+<textarea id="q3" name="q3" rows="2" required></textarea>
+
+
+            <label for="appeal_message">Why should you be unbanned?</label>
+            <textarea id="appeal_message" name="appeal_message" rows="4" required></textarea>
+
+            <button type="submit">Submit Appeal</button>
+        </form>
+        <div class="footer">This form is managed by the server's moderation team. Submitting does not guarantee an unban.</div>
+    </div>
+</body>
+</html>
